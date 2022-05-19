@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "dnazureser1-4ef7"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "dnazureser1-4ef7"
+  template:
+    metadata:
+      labels:
+        app: "dnazureser1-4ef7"
+    spec:
+      containers:
+        - name: "dnazureser1-4ef7"
+          image: "regshilpa.azurecr.io/dnazureser1"
+          ports:
+          - containerPort: 80
